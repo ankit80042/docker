@@ -1,4 +1,4 @@
-FROM 898334718399.dkr.ecr.us-east-1.amazonaws.com/aws-ecr:latest-build-test
+FROM openjdk:8
 
 WORKDIR /app
 
