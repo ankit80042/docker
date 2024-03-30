@@ -1,14 +1,14 @@
-FROM openjdk:8
+ARG JAVA_VERSION="8"
+
+FROM openjdk:${JAVA_VERSION}
 
 ARG SOME_ARG="Default_Value"
-ARG SOME_ARG_2="Default_Value_2"
 
-WORKDIR /app/test
+WORKDIR /app
 
-COPY . /app/test
+COPY . /app
 
 RUN echo "ARGS is ${SOME_ARG}"
-RUN echo "ARGS is ${SOME_ARG_2}"
 
 RUN javac Main.java
 
